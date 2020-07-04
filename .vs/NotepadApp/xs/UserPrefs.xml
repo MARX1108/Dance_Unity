@@ -1,0 +1,27 @@
+﻿<Properties StartupConfiguration="{750AADAB-8D01-30F2-10E5-BC1A74F7445B}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/SaveLoad.cs">
+    <Files>
+      <File FileName="Assets/Scripts/NewTrainingButton.cs" Line="14" Column="1" />
+      <File FileName="Assets/Scripts/SaveLoad.cs" Line="16" Column="9" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="NotepadApp" expanded="True" selected="True" />
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="NotepadApp" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="87f2afd4-1f6e-458e-8c06-983da692cd1e" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
