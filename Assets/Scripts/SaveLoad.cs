@@ -35,6 +35,5 @@ public class SaveLoad : MonoBehaviour
         savedAnim.GetComponent<Animator>().Play("SavedAnim");
         yield return new WaitForSeconds(1);
         savedAnim.GetComponent<Animator>().Play("New State");
-
     }
 }
