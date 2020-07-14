@@ -8,90 +8,85 @@ public class NewTrainingButton : MonoBehaviour
     public GameObject thePanel;
 
     public GameObject MainPanel_1;
-    public GameObject TP_Close_button;
+    public GameObject AddVideoPanel;
 
-    public GameObject panel_step2;
-    public GameObject new_video_panel;
+    public GameObject MainPanel_2;
 
-    public GameObject main_panel_2;
-
+    public GameObject FilePanel;
+    public GameObject ResultPanel;
+    // on start 
     void Start()
     {
+        // MainPanel_1.SetActive(false);
         MainPanel_1.SetActive(false);
-        panel_step2.SetActive(false);
-        new_video_panel.SetActive(false);
-        main_panel_2.SetActive(false);
+        AddVideoPanel.SetActive(false);
+        MainPanel_2.SetActive(false);
     }
 
-    public void Back_2to1()
+
+
+    public void openFP()
     {
-        panel_step2.SetActive(false);
+        FilePanel.SetActive(true);
+        ResultPanel.SetActive(false);
+    }
+    public void openRP()
+    {
+        FilePanel.SetActive(false);
+        ResultPanel.SetActive(true);
+    }
+    //open main panel when click new Training
+    public void OpenMp1()
+    {
         MainPanel_1.SetActive(true);
     }
 
-    public void Back_3to2()
+    //from mp1 to mp2 when click next button
+    public void Mp1ToMp2()
     {
-        panel_step2.SetActive(true);
-        main_panel_2.SetActive(false);
-    }
-
-
-
-    public void Next_1to2()
-    {
-        panel_step2.SetActive(true);
         MainPanel_1.SetActive(false);
+        MainPanel_2.SetActive(true);
     }
 
-    public void Next_2to3()
+    //from mp2 to mp1 when click back button
+    public void Mp2ToMp1()
     {
-        panel_step2.SetActive(false);
-        main_panel_2.SetActive(true);
+        MainPanel_1.SetActive(true);
+        MainPanel_2.SetActive(false);
     }
+    
 
     public void Submit()
     {
         MainPanel_1.SetActive(false);
-        panel_step2.SetActive(false);
-        new_video_panel.SetActive(false);
-        main_panel_2.SetActive(false);
-
+        MainPanel_2.SetActive(false);
     }
 
+    // open the addnvideopanel
     public void OpenNewVideoPanel()
     {
-        new_video_panel.SetActive(true);
+        AddVideoPanel.SetActive(true);
     }
-
+    // close the addnvideopanel
     public void CloseNewVideoPanel()
     {
-        new_video_panel.SetActive(false);
+        AddVideoPanel.SetActive(false);
+    }
+    // submit add new video
+    public void AddNewVideo()
+    {
+        AddVideoPanel.SetActive(false);
+        MainPanel_1.SetActive(true);
     }
 
     public void Close()
     {
         MainPanel_1.SetActive(false);
-        panel_step2.SetActive(false);
-        new_video_panel.SetActive(false);
-        main_panel_2.SetActive(false);
+        AddVideoPanel.SetActive(false);
+        MainPanel_2.SetActive(false);
     }
 
-    public void AddNewVideo()
-    {
-        new_video_panel.SetActive(false);
-        panel_step2.SetActive(true);
-    }
-
-
-    public void OpenNewMainPanel_1()
-    {
-        MainPanel_1.SetActive(true);
-    }
-
-    public void CloseNewMainPanel_1()
-    {
-        MainPanel_1.SetActive(false);
-    }
+    
 
     public void ClearText()
     {
