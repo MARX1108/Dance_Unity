@@ -44,6 +44,7 @@ public class NewTrainingButton : MonoBehaviour
     }
 
 
+
     public void Next_1to2()
     {
         panel_step2.SetActive(true);
