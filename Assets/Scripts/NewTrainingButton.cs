@@ -7,40 +7,32 @@ public class NewTrainingButton : MonoBehaviour
     public GameObject theText;
     public GameObject thePanel;
 
-    public GameObject TrainingPanel;
+    public GameObject MainPanel_1;
     public GameObject TP_Close_button;
 
     public GameObject panel_step2;
     public GameObject new_video_panel;
-    public GameObject back_2to1_button;
-    public GameObject next_1to2_button;
-    public GameObject next_2to3_button;
-    public GameObject close_new_video_panel_button;
-    public GameObject add_new_video_button;
 
-    public GameObject step3_panel;
-    public GameObject close_step3_panel;
-    public GameObject submit_bt;
-
+    public GameObject main_panel_2;
 
     void Start()
     {
-        TrainingPanel.SetActive(false);
+        MainPanel_1.SetActive(false);
         panel_step2.SetActive(false);
         new_video_panel.SetActive(false);
-        step3_panel.SetActive(false);
+        main_panel_2.SetActive(false);
     }
 
     public void Back_2to1()
     {
         panel_step2.SetActive(false);
-        TrainingPanel.SetActive(true);
+        MainPanel_1.SetActive(true);
     }
 
     public void Back_3to2()
     {
         panel_step2.SetActive(true);
-        step3_panel.SetActive(false);
+        main_panel_2.SetActive(false);
     }
 
 
@@ -48,21 +40,21 @@ public class NewTrainingButton : MonoBehaviour
     public void Next_1to2()
     {
         panel_step2.SetActive(true);
-        TrainingPanel.SetActive(false);
+        MainPanel_1.SetActive(false);
     }
 
     public void Next_2to3()
     {
         panel_step2.SetActive(false);
-        step3_panel.SetActive(true);
+        main_panel_2.SetActive(true);
     }
 
     public void Submit()
     {
-        TrainingPanel.SetActive(false);
+        MainPanel_1.SetActive(false);
         panel_step2.SetActive(false);
         new_video_panel.SetActive(false);
-        step3_panel.SetActive(false);
+        main_panel_2.SetActive(false);
 
     }
 
@@ -78,10 +70,10 @@ public class NewTrainingButton : MonoBehaviour
 
     public void Close()
     {
-        TrainingPanel.SetActive(false);
+        MainPanel_1.SetActive(false);
         panel_step2.SetActive(false);
         new_video_panel.SetActive(false);
-        step3_panel.SetActive(false);
+        main_panel_2.SetActive(false);
     }
 
     public void AddNewVideo()
@@ -91,14 +83,14 @@ public class NewTrainingButton : MonoBehaviour
     }
 
 
-    public void OpenNewTrainingPanel()
+    public void OpenNewMainPanel_1()
     {
-        TrainingPanel.SetActive(true);
+        MainPanel_1.SetActive(true);
     }
 
-    public void CloseNewTrainingPanel()
+    public void CloseNewMainPanel_1()
     {
-        TrainingPanel.SetActive(false);
+        MainPanel_1.SetActive(false);
     }
 
     public void ClearText()
