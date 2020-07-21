@@ -13,26 +13,62 @@ public class NewTrainingButton : MonoBehaviour
     public GameObject MainPanel_2;
 
     public GameObject FilePanel;
+
+    public GameObject ApplyPanel;
+
     public GameObject ResultPanel;
+
+    public GameObject FileTab;
+    public GameObject ApplyTab;
+    public GameObject ResultTab;
+
+    Color32 titleColor;
+    Color32 subTitleColor;
     // on start 
     void Start()
     {
-        // MainPanel_1.SetActive(false);
+        // MainPanel_1.SetActive(false);     
+        titleColor = new Color32(149, 130, 178, 255);
+        subTitleColor = new Color32(149, 130, 178, 153);
+        openFP()  ;
         MainPanel_1.SetActive(false);
         AddVideoPanel.SetActive(false);
         MainPanel_2.SetActive(false);
     }
 
 
-
     public void openFP()
     {
+        
+        FileTab.GetComponentInChildren<Text>().color = titleColor;
+        ApplyTab.GetComponentInChildren<Text>().color = subTitleColor;
+        ResultTab.GetComponentInChildren<Text>().color = subTitleColor;
+
         FilePanel.SetActive(true);
+        ApplyPanel.SetActive(false);
         ResultPanel.SetActive(false);
     }
+
+    public void openAP()
+    {
+        FileTab.GetComponentInChildren<Text>().color = subTitleColor;
+        ApplyTab.GetComponentInChildren<Text>().color = titleColor;
+        ResultTab.GetComponentInChildren<Text>().color = subTitleColor;
+
+
+        FilePanel.SetActive(false);
+        ApplyPanel.SetActive(true);
+        ResultPanel.SetActive(false);
+    }
+
     public void openRP()
     {
+        FileTab.GetComponentInChildren<Text>().color = subTitleColor;
+        ApplyTab.GetComponentInChildren<Text>().color = subTitleColor;
+        ResultTab.GetComponentInChildren<Text>().color = titleColor;
+
         FilePanel.SetActive(false);
+        ApplyPanel.SetActive(false);
         ResultPanel.SetActive(true);
     }
     //open main panel when click new Training
