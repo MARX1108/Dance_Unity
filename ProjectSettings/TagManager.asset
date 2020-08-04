@@ -38,15 +38,6 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: FloatingElements
-    uniqueID: 4190339435
-    locked: 0
-  - name: Foreground
-    uniqueID: 2867306647
-    locked: 0
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Background
-    uniqueID: 4084654613
     locked: 0
