@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEditor;
+using System.IO;
 public class NewTrainingButton : MonoBehaviour
 {
     public GameObject theText;
@@ -35,7 +37,40 @@ public class NewTrainingButton : MonoBehaviour
         AddVideoPanel.SetActive(false);
         MainPanel_2.SetActive(false);
     }
+    public void SingleFileSelector()
+    {
+        string path = EditorUtility.OpenFilePanel("Select Skeleton File", "", "fbx");
+        if (path != "")
+        {
+            Debug.Log(path);
+        }
+    }
 
+    public void MutipleFileSelector()
+    {
+        string path = EditorUtility.OpenFilePanel("Select Skeleton File", "", "");
+        if (path != "")
+        {
+            string[] files = Directory.GetFiles(path); //This array contains all the files within the selected folder
+            for (int i = 0; i < files.Length; i++)
+            {
+                Debug.Log(files[i]);
+            }
+        }
+
+    }
+
+    public void ReadString()
+    {
+        string path = EditorUtility.OpenFilePanel("Select Skeleton File", "", "");
+        //Read the text from directly from the test.txt file
+        StreamReader reader = new StreamReader(path);
+        string firstLine = reader.ReadLine();
+        if (firstLine == null) firstLine = "";
+
+        FileTab.GetComponentInChildren<Text>().text = firstLine;
+        reader.Close();
+    }
 
     public void openFP()
     {
@@ -47,6 +82,9 @@ public class NewTrainingButton : MonoBehaviour
         FilePanel.SetActive(true);
         ApplyPanel.SetActive(false);
         ResultPanel.SetActive(false);
+
+        // SingleFileSelector();
+        ReadString();
     }
 
     public void openAP()
